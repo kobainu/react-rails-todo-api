@@ -1,26 +1,17 @@
 import { useEffect, useState } from "react";
 import { Task } from "./component/Task";
+import axios from "axios";
 
 const App = () => {
-  const initialTasks = [
-    {
-      name: "買い物",
-      isDone: true,
-    },
-    {
-      name: "ランニング",
-      isDone: false,
-    },
-    {
-      name: "プログラミング",
-      isDone: false,
-    },
-  ];
-
   const [tasks, setTasks] = useState([]);
 
+  const fetch = async () => {
+    const res = await axios.get("http://localhost:3010/tasks");
+    setTasks(res.data);
+  };
+
   useEffect(() => {
-    setTasks(initialTasks);
+    fetch();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
