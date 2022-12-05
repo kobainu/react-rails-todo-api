@@ -19,6 +19,7 @@ code {
 }
 
 .taskArea {
-  margin: 0 75px;
   text-align: left;
+  display: flex;
+  justify-content: space-between;
 }
