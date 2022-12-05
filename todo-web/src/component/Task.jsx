@@ -1,3 +1,8 @@
 export const Task = (props) => {
-  return <li>{props.name}</li>;
+  return (
+    <div className="taskArea">
+      <input type="checkbox" className="task" />
+      <label>{props.name}</label>
+    </div>
+  );
 };

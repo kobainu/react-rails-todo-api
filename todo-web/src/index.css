@@ -11,3 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.container {
+  text-align: center;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.taskArea {
+  margin: 0 75px;
+  text-align: left;
+}
